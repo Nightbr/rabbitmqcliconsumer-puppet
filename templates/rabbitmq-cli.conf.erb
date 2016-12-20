@@ -1,0 +1,26 @@
+[rabbitmq]
+host=<%= @host %>
+username=<%= @user %>
+password=<%= @password %>
+vhost=<%= @vhost %>
+port=<%= @port %>
+queue=<%= @queue %>
+compression=<%= @compression %>
+
+[logs]
+error=<%= @logs_error %>
+info=<%= @logs_info %>
+
+<% if @prefetch == true %>
+[prefetch]
+count=<%= @prefetch_count %>
+global=<%= @prefetch_global %>
+<% end %>
+
+<% if @exchange == true %>
+[exchange]
+name=<%= @exchange_name %>
+autodelete=<%= @exchange_autodelete %>
+type=<%= @exchange_type %>
+durable=<%= @exchange_durable %>
+<% end %>
